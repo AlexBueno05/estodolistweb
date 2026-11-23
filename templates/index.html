@@ -3,7 +3,13 @@
 
 {% block content %}
     <main class="max-w-5xl mx-auto px-4 py-6">
-        <h2 class="text-2xl font-bold mb-4">Minhas tarefas</h2>
+        <div class="flex items-center justify-between mb-4">
+            <h2 class="text2xl font-bold">Minhas tarefas</h2>
+            <a href="/adicionar"
+            class="px-4 py-3 rounded-lg bg-indigo-600 text-white font-semibold hover:bg-indigo-700">
+            Nova tarefa
+        </a>
+        </div>
         <ul class="space-y-3">
             {% for tarefa in tarefas %}
                 <li class="bg-white rounded-xl shadow p-4 flex flex-col gap-3
@@ -60,6 +66,9 @@
                 </li>
             {% endfor %}
         </ul>
+
+        <p class="bg-white text-sm text-slate-500">
+        </p>
         {# contador aqui #}
     </main>
 {% endblock %}
